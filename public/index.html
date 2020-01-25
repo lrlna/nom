@@ -1,21 +1,19 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ config.title }}{% endif %}</title>
-  <link rel="stylesheet" href="{{ get_url(path="tachyons.css", trailing_slash=false) | safe }}">
-  <link rel="stylesheet" href="{{ get_url(path="markdown.css", trailing_slash=false) | safe }}">
+  <title></title>
+  <link rel="stylesheet" href="http://127.0.0.1:1111/tachyons.css">
+  <link rel="stylesheet" href="http://127.0.0.1:1111/markdown.css">
 	<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Lobster&display=swap" rel="stylesheet">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@_lrlna">
   <meta name="twitter:creator" content="@_lrlna">
   <meta name="twitter:title" content="Irina's Blog">
-  <meta name="twitter:image" content="{{ get_url(path="twitter-card.png", trailing_slash=false) | safe }}">
-  <!-- <link rel="preload" as="font" crossorigin href="{{ get_url(path="inter-regular.woff2", trailing_slash=false) | safe }}"> -->
-  <!-- <link rel="preload" as="font" crossorigin href="{{ get_url(path="inter-italic.woff2", trailing_slash=false) | safe }}"> -->
-  <!-- <link rel="preload" as="font" crossorigin href="{{ get_url(path="inter-bold.woff2", trailing_slash=false) | safe }}"> -->
-  {% if config.generate_rss %}
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") | safe }}">
-  {% endif %}
+  <meta name="twitter:image" content="http://127.0.0.1:1111/twitter-card.png">
+  <!-- <link rel="preload" as="font" crossorigin href="http://127.0.0.1:1111/inter-regular.woff2"> -->
+  <!-- <link rel="preload" as="font" crossorigin href="http://127.0.0.1:1111/inter-italic.woff2"> -->
+  <!-- <link rel="preload" as="font" crossorigin href="http://127.0.0.1:1111/inter-bold.woff2"> -->
+  
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
 	<link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
@@ -43,24 +41,24 @@
       <div class="pink-shadow flex-column mr3">irina's</div>
       <div class="flex-column">cmptr blog</div>
     </h1>
-    {% block content %}
+    
     <a href="https://lrlna.computer" class="black link b f1 f-subheadline-l ml2
     mt3 mt4-ns">
     </a>
   </nav>
-  {% for page in paginator.pages | reverse %}
+  
     <section itemprop="name" class="mt3 mt4-l mb0 archivo flex-column">
       <a class="archivo b f3 f2-m f-subheadline-l link blog-dark-blue underlineb"
-        href="{{ page.permalink | safe }}">
-        {{ page.title }}
+        href="http://127.0.0.1:1111/about/">
+        about
       </a>
     </section>
-  {% endfor %}
+  
   <!-- <section itemprop="name" class="w-100 mt3 mt4-l mb0 dib self-end">
     <a class="f3 f-subheadline-l link blog-dark-blue underline b"
-      href="{{ get_url(path="rss.xml") | safe }}" target="_blank">
+      href="http://127.0.0.1:1111/rss.xml" target="_blank">
       rss feed
     </a> -->
   </section>
-  {% endblock content %}
+  
 <body>

@@ -1,0 +1,35 @@
+sans {
+  font-family: 'Lobster-Regular', cursive;
+}
+
+@font-face {
+  font-family: 'Lobster';
+  font-style:  normal;
+  font-weight: 400;
+  src: url("Lobster-Regular.ttf") format("ttf"),
+}
+
+sans {
+  font-family: 'ArchivoBlack-Regular', sans-serif;
+}
+
+@font-face {
+  font-family: 'ArchivoBlack-Regular';
+  font-style:  normal;
+  font-weight: 400;
+  src: url("ArchivoBlack-Regular.ttf") format("ttf"),
+}
+
+@font-face {
+  font-family: 'ArchivoBlack-Regular';
+  font-style:  italic;
+  font-weight: 400;
+  src: url("ArchivoBlack-Regular.ttf") format("ttf"),
+}
+
+@font-face {
+  font-family: 'ArchivoBlack-Regular';
+  font-style:  normal;
+  font-weight: 700;
+  src: url("ArchivoBlack-Regular.ttf") format("ttf"),
+}

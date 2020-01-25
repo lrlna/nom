@@ -1,0 +1,153 @@
+.blog-dark-blue {
+  color: #282d3e;
+}
+
+.pink-shadow {
+  text-shadow: -5px 3px 0 #ddc4c0ff;
+}
+
+.blog-pink {
+  color: #ddc4c0ff;
+}
+
+.blog-yellow {
+  color: #ffb86c;
+}
+
+.blog-brown {
+  color: #6e6b5e;
+}
+
+.blog-bg-dark-blue {
+  background-color: #282d3e;
+}
+
+.archivo {
+  font-family: 'ArchivoBlack', sans-serif;
+}
+
+.blog-bg-light-purple {
+  background-color: #dfe0f0ff;
+}
+
+.blog-light-purple {
+  color: #dfe0f0ff;
+}
+
+#markdown pre {
+  overflow: auto;
+  padding: 1rem 1rem 1rem 1rem;
+  font-size: .875rem;
+  width: calc(100vw - 0.5rem);
+  max-width: 100%;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+#markdown code {
+  background: #f1f1f1;
+  border-radius: 3px 3px 3px 3px;
+  padding: 0.1em 0.3em 0.1em 0.3em;
+}
+
+#markdown a {
+  color: #282d3e;
+  text-decoration: solid underline #ddc4c0ff 0.25em;
+  -webkit-text-decoration: solid underline #ffb86c 0.25em;
+}
+
+#markdown h1,
+#markdown h2 {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 30em) {
+  #markdown pre {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+#markdown dl {
+  padding: 0;
+}
+
+#markdown dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+#markdown dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+#markdown table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+#markdown table th {
+  font-weight: 600;
+}
+
+#markdown table td,
+#markdown table th {
+  border: 1px solid #aaa;
+  padding: 6px 13px;
+}
+
+#markdown table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+#markdown table tr:nth-child(2n) {
+  background-color: #fff;
+}
+
+#markdown hr:before {
+  content: "";
+  display: table;
+}
+
+#markdown strong {
+  font-family: 'Lobster', cursive;
+  font-style: normal;
+  text-shadow: -4px 3px 0 #ddc4c0ff;
+}
+
+#markdown hr:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+#markdown table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#markdown .footnote-definition {
+  display: flex;
+  flex-direction: row;
+}
+
+#markdown .footnote-definition-label {
+  top: 0;
+  margin-left: .5rem;
+  font-size: .875rem;
+  line-height: revert;
+}
+
+#markdown .footnote-definition > p:first-child {
+  margin-top: 0;
+}
+
+#markdown .footnote-definition > p {
+  margin-bottom: 0;
+}

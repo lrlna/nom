@@ -1,0 +1,109 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <a href="{{ get_url(path="/", trailing_slash=false) | safe }}"
+       class="black link b f5 mt3 mt4-ns">
+      (back)
+    </a>
+  </nav>
+  <article class="mt3 mt5-ns lh-copy flex flex-column blog-dark-blue">
+    <div itemprop="articleBody" class="mw6 mw7-l" id="markdown">
+      <h2 class="f2 f1-ns b mt0 mb1 mb2-ns">
+        {{ page.title }}
+      </h2>
+      <h6 class="archivo blog-yellow f6 f5-ns mt0 mb2">
+          {{ page.date }}
+      <h6>
+      <div class="f5 f4-ns">
+        {{ page.content | safe }}
+      </div>
+    </div>
+  </article>
+  <script>
+    // let refs = gatherReferences();
+    linkFootNotes();
+    moveFootNotes();
+    // createReferences(refs);
+
+    function gatherReferences() {
+      return document.querySelector('#markdown').querySelectorAll('a')
+    }
+
+    //function createReferences(refs) {
+    //  let root = document.querySelector('#markdown')
+    //  refs.forEach((el, num) => {
+    //    let ol = null;
+    //    // Create a new # references header
+    //    if (num === 0) {
+    //      let refs = document.createElement('h2')
+    //      refs.innerHTML = 'References'
+    //      refs.setAttribute('id', 'references')
+    //      root.appendChild(refs)
+
+    //      let details = document.createElement('details')
+    //      details.innerHTML = '<summary class="link underline pointer">View all references</summary>'
+
+    //      // Create an unordered list to hold the references in
+    //      ol = document.createElement('ol')
+    //      ol.setAttribute('id', 'references-list')
+    //      ol.setAttribute('class', 'lh-copy')
+
+    //      details.appendChild(ol)
+    //      root.appendChild(details)
+    //    } else {
+    //      ol = document.querySelector('#references-list')
+    //    }
+
+    //    // Create a new reference
+    //    let li = document.createElement('li')
+    //    li.innerHTML = `<a href=${el.href}>${el.href}</a>`
+    //    ol.appendChild(li)
+    //  })
+    //}
+
+    function linkFootNotes() {
+      document.querySelectorAll('.footnote-reference').forEach((el, num) => {
+        el.setAttribute('id', 'footnote-reference-' + num)
+      })
+
+      document.querySelectorAll('.footnote-definition sup').forEach((el) => {
+        console.log(el)
+        el.remove()
+      })
+
+      document.querySelectorAll('.footnote-definition p').forEach((el, num) => {
+        let space = document.createElement('span')
+        space.innerHTML = ' '
+        el.appendChild(space)
+
+        let back = document.createElement('a')
+        back.setAttribute('href', '#footnote-reference-' + num)
+        back.setAttribute('class', 'underline pointer')
+        back.innerHTML = '←'
+        el.appendChild(back)
+
+        let i = document.createElement('span')
+        i.setAttribute('class', 'b mr1')
+        i.innerHTML = `${num + 1}. `
+        el.prepend(i)
+      })
+    }
+
+    function moveFootNotes() {
+      let root = document.querySelector('#markdown')
+      document.querySelectorAll('.footnote-definition').forEach((el, num) => {
+        // Create a new #notes header
+        if (num === 0) {
+          let notes = document.createElement('h2')
+          notes.innerHTML = 'Notes'
+          notes.setAttribute('id', 'notes')
+          root.appendChild(notes)
+        }
+
+        // Move element from inline to the end of the markdown block, under the
+        // #notes header
+        root.appendChild(el)
+      })
+    }
+  </script>
+{% endblock content %}

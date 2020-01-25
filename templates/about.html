@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <a href="{{ get_url(path="/", trailing_slash=false) | safe }}"
+       class="black link b f1 f-subheadline-l ml2 mt3 mt4-ns">
+      back
+    </a>
+  </nav>
+  <article class="mt3 mt5-ns lh-copy flex flex-column">
+    <div itemprop="articleBody" class="mw6 mw7-l self-center-l" id="markdown">
+      irina is a software engineer based in Berlin.
+    </div>
+  </article>
+{% endblock content %}

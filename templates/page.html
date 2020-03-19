@@ -2,15 +2,15 @@
 
 {% block content %}
     <a href="{{ get_url(path="/", trailing_slash=false) | safe }}"
-       class="black link b f5 mt3 mt4-ns">
+       class="black link b f5 mt4-ns">
       (back)
     </a>
   </nav>
-  <article class="mt3 mt5-ns lh-copy flex flex-column blog-dark-blue">
+  <article class="flex-l flex-row-l flex-grow-1-l blog-dark-blue mw-100-ns">
     <div itemprop="articleBody" class="mw6 mw7-l" id="markdown">
-      <h2 class="f2 f1-ns b mt0 mb1 mb2-ns">
+      <h1 class="f-subheadline-l lh-solid f2 f1-ns f1-m b mt0 mb1 mb2-ns underline">
         {{ page.title }}
-      </h2>
+      </h1>
       <h6 class="archivo blog-yellow f6 f5-ns mt0 mb2">
           {{ page.date }}
       <h6>

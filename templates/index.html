@@ -8,7 +8,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@_lrlna">
   <meta name="twitter:creator" content="@_lrlna">
-  <meta name="twitter:title" content="Irina's Blog">
+  <meta name="twitter:title" content="Irina's and Yoshua's Food Blog">
   <meta name="twitter:image" content="{{ get_url(path="twitter-card.png", trailing_slash=false) | safe }}">
   <!-- <link rel="preload" as="font" crossorigin href="{{ get_url(path="inter-regular.woff2", trailing_slash=false) | safe }}"> -->
   <!-- <link rel="preload" as="font" crossorigin href="{{ get_url(path="inter-italic.woff2", trailing_slash=false) | safe }}"> -->
@@ -17,26 +17,24 @@
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") | safe }}">
   {% endif %}
 <head>
-<body class="ph3 h-100 ph4-ns flex flex-row pb3 pb4-ns blog-bg-light-purple archivo">
-  <nav class="h-100 rotate-90 flex-column mr5">
-    <h1 class="mt3 mt4-ns mb0 b f1-m flex-row flex f-subheadline-l archivo blog-dark-blue">
-      <div class="pink-shadow flex-column mr3">irina's</div>
-      <div class="flex-column">cmptr blog</div>
+<body class="ph3 h-100-l ph4-ns flex-l pb3 pb4-ns blog-bg-light-purple archivo">
+  <nav class="h-100-l flex-grow-0-l rotate-90-l">
+    <h1 class="mt5 mb0 b f2 f1-m flex-row-l f-subheadline-l archivo blog-dark-blue">
+      <div class="pink-shadow mr3">nom: a recipe blog</div>
     </h1>
     {% block content %}
-    <a href="https://lrlna.computer" class="black link b f1 f-subheadline-l ml2
-    mt3 mt4-ns">
+    <a href="https://lrlna.computer" class="black link b f1 f-subheadline-l ml2 mt3 mt4-ns">
     </a>
   </nav>
   {% for page in paginator.pages | reverse %}
-    <section itemprop="name" class="mt3 mt4-l mb0 archivo flex-column">
-      <a class="archivo b f3 f2-m f-subheadline-l link blog-dark-blue underlineb"
+    <section itemprop="name" class="mt4 mb0 mw6 mw7-l flex-grow-1-l archivo flex-row-l lh-solid">
+      <a class="archivo b f2 f1-m f-subheadline-l link blog-dark-blue underline"
         href="{{ page.permalink | safe }}">
         {{ page.title }}
       </a>
     </section>
   {% endfor %}
-  <!-- <section itemprop="name" class="w-100 mt3 mt4-l mb0 dib self-end">
+  <!-- <section itemprop="name" class="self-end">
     <a class="f3 f-subheadline-l link blog-dark-blue underline b"
       href="{{ get_url(path="rss.xml") | safe }}" target="_blank">
       rss feed

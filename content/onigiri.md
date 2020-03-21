@@ -23,7 +23,7 @@ Rice balls! For lunch! c a r b s &nbsp;&nbsp;&nbsp; **c a r b s** &nbsp;&nbsp;&n
 - salt
 - a bunch of nori sheets
 
-## // TODO
+## Method 
 
 It's good to make rice a bit ahead of time, like in the morning. 99.99% of the
 time I forget to do this, so I wrap my Onigiri in hot rice, which is kind of
